@@ -95,6 +95,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-template-rows: auto;
+  grid-gap: 20px;
 }
 
 .card {
@@ -102,6 +103,10 @@ main {
   padding: 10px;
   color: var(--base-color);
   border-radius: 12px;
+}
+
+.card img {
+  width: 100%;
 }
 
 .sub-heading {
@@ -126,6 +131,10 @@ main {
   text-transform: capitalize;
 }
 
+.search-results li:hover {
+  cursor: pointer;
+}
+
 .search-results li:nth-child(even) {
   transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
@@ -134,4 +143,41 @@ main {
 .search-results li:nth-child(odd) {
   transform: perspective(100px) rotateX(-3deg) translateY(3px);
   background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+.no-record {
+  text-align: center;
+  padding: 30px;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.counry-info {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--base-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: start;
+}
+
+.counry-info img {
+  width: 100%;
+}
+
+
+@media (max-width: 700px) {
+  .main-hero-txt {
+    display: none;
+  }
+
+  .counry-info {
+    grid-template-columns: 1fr;
+  } 
 }
