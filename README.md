@@ -4,6 +4,9 @@
 > The app allows you to search for a specific country and find relevant information.
 
 
+![screenshot](./app_screenshot.png)
+
+
 ## Built With
 
 - Major languages: JavaScript, HTML/CSS
